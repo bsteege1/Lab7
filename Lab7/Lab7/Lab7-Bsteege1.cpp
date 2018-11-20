@@ -1,5 +1,11 @@
+//Brandon Steege
+//Lab7-Bsteege1.cpp
+//Lab 7
+//Description: A comparison of the different kind of sort functions
+//
+
 #include "winTimer.h"
-#include "ContainterPrinting.h"
+#include "ContainterPrinting.h" //Included from lab 6 to allow << of lists
 #include "Lab7-Bsteege1.h"
 #include <iostream>
 #include <vector>
@@ -38,7 +44,7 @@ getNums(size_t listSize, double minNum, double maxNum)
 	return theList;
 }
 //////////////////////////////////////////// Declaring Lab7-Bsteege.h Functions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
+//All functions from rosettacode.org
 template <typename RandomAccessIterator>
 void bubble_sort(RandomAccessIterator begin, RandomAccessIterator end)
 {
@@ -144,12 +150,12 @@ int main()
 		// Report a most isolated isolated number
 		Timer time;
 		time.start();
-		sort(begin(numbers), end(numbers));
+		//sort(begin(numbers), end(numbers));
 		//bubble_sort(numbers.begin(), numbers.end());
 		//insertion_sort(numbers.begin(), numbers.end());
 		//selection_sort(numbers.begin(), numbers.end());
 		//mergesort(numbers.begin(), numbers.end());
-		//quicksort(numbers.begin(), numbers.end());
+		quicksort(numbers.begin(), numbers.end());
 		time.stop();
 		cout << "The sorted List is: "
 			//<< numbers 
